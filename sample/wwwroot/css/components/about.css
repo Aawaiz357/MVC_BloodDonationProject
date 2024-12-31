@@ -1,0 +1,141 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2.5rem;
+}
+
+    .hero img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .hero .content {
+        max-width: 50%;
+        padding: 0 40px;
+    }
+
+        .hero .content h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero .content p {
+            font-size: 1rem;
+            color: var(--light-black);
+            margin-bottom: 20px;
+        }
+
+        .hero .content .sub {
+            font-size: 14px;
+            color: var(--light-black);
+        }
+
+            .hero .content .sub a {
+                color: var(--red);
+                transition: color 0.3s ease;
+            }
+
+                .hero .content .sub a:hover {
+                    color: var(--light-red);
+                }
+
+/* Content */
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block-start: 8rem;
+}
+
+.content {
+    max-width: 600px;
+    text-align: center;
+}
+
+    .content h1 {
+        font-size: 36px;
+        margin: 10px 0;
+    }
+
+    .content p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: var(--grey-700);
+        margin-left: 50px;
+    }
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-block: 20px;
+    margin-top: 20px;
+}
+
+    .images img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+/* Staff */
+
+.staff {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-block-start: 8rem;
+    text-align: center;
+}
+
+.title {
+    color: var(--light-red);
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1rem;
+    color: var(--light-black);
+    margin-bottom: 40px;
+}
+
+.staff-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.staff-member {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+}
+
+    .staff-member img {
+        width: 100%;
+        height: auto;
+    }
+
+.staff-info {
+    background-color: var(--light-red);
+    color: var(--white);
+    padding: 15px;
+}
+
+    .staff-info h3 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .staff-info p {
+        margin: 5px 0 0;
+        font-size: 0.875rem;
+    }

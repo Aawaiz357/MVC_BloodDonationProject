@@ -1,0 +1,32 @@
+.blog {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-block-start: 110px;
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--light-grey);
+}
+
+    .post h2 {
+        font-size: 24px;
+        color: var(--light-black);
+        margin: 0 0 10px;
+    }
+
+    .post .comment {
+        font-size: 0.875rem;
+        color: var(--grey-700);
+        margin-bottom: 10px;
+    }
+
+    .post p {
+        font-size: 1rem;
+        color: var(--light-black);
+        line-height: 1.6;
+        max-width: 100%;
+    }

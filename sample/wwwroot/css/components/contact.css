@@ -1,0 +1,82 @@
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+    .contact h2 {
+        text-transform: uppercase;
+    }
+
+.left,
+.right {
+    width: 48%;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--light-black);
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 50px;
+    height: 2px;
+    background-color: var(--light-red);
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.contact-btn {
+    background-color: var(--light-red);
+    color: var(--white);
+    padding: 16px 24px;
+    border-radius: 8px;
+    border-style: none;
+    font-family: Plus Jakarta Sans;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    transition: color border background-color 0.3s ease-in-out;
+}
+
+    .contact-btn:hover {
+        background-color: var(--white);
+        color: var(--red);
+        border: 1px solid var(--light-red);
+    }
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+    .contact-info li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+        .contact-info li i {
+            font-size: 20px;
+            color: var(--light-red);
+            margin-right: 10px;
+        }

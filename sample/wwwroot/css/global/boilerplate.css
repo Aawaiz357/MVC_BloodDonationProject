@@ -1,0 +1,214 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --light-black: #453e3e;
+    --black-600: #2b161b;
+    --grey-900: #666666;
+    --grey-700: #888888;
+    --grey-600: #747282;
+    --grey-300: #808285;
+    --light-grey: #ccd6df;
+    --red: #d90700;
+    --light-pink: #ddb8c1;
+    --light-red: #ef4d48;
+}
+/* karla-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/karla-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/plus-jakarta-sans-v8-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/plus-jakarta-sans-v8-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* montserrat-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/montserrat-v29-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    font-weight: 500;
+    background-color: rgb(241, 235, 235);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    max-width: 50ch;
+    color: var(--color-grey);
+    line-height: 1.5;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+}
+
+    .header ul {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        font-size: 1.0625rem;
+        padding: 0px 17px;
+        margin: 0px;
+        color: var(--light-black);
+        cursor: pointer;
+        transition-property: color, border-bottom, padding-bottom;
+    }
+
+        .header ul li:hover :not(button) {
+            color: var(--light-red);
+            border-bottom: 2px solid var(--red);
+            padding-bottom: 5px;
+            transition: 150ms ease-in-out;
+        }
+
+    .header button {
+        background-color: var(--light-red);
+        color: var(--white);
+        padding: 16px 24px;
+        border-radius: 8px;
+        border-style: none;
+        font-family: Plus Jakarta Sans;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: inline-block;
+        transition: color 150ms ease-in-out;
+    }
+
+        .header button:hover {
+            background-color: var(--white);
+            color: var(--light-red);
+            border: 1px solid var(--red);
+        }
+/* Footer */
+.footer {
+    background-color: var(--black);
+    padding: 40px 0;
+    color: var(--white);
+}
+
+    .footer .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+        .footer .container > div {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+    .footer h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .footer p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .footer .address p,
+    .footer .quick-links a,
+    .footer .newsletter p {
+        margin: 0 0 10px;
+    }
+
+    .footer .quick-links a {
+        color: var(--white);
+        text-decoration: none;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+        .footer .quick-links a:hover {
+            color: var(--light-red);
+        }
+
+    .footer .newsletter input[type='email'] {
+        padding: 10px;
+        border: none;
+        width: calc(100% - 100px);
+        margin-right: 10px;
+    }
+
+    .footer .newsletter button {
+        padding: 10px 20px;
+        border: none;
+        background-color: var(--light-red);
+        color: var(--white);
+        cursor: pointer;
+    }
+
+        .footer .newsletter button:hover {
+            background-color: var(--red);
+        }
+
+    .footer .bottom-bar {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid var(--light-black);
+        margin-top: 20px;
+    }

@@ -1,0 +1,139 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link rel="stylesheet" href="/css/components/contact.css" />
+
+<header class="header wrapper">
+    <a href="/Home/index">
+        <img src="/media/asset 0.png" width="269" height="58" alt="logo" />
+    </a>
+    <ul>
+        <li><a href="/Home/blog">Blog</a></li>
+        <li><a href="/Home/about">About Us</a></li>
+        <li><a href="/Home/contact">Contact Us</a></li>
+        <li><a href="/Home/donation"><button>Donate Blood</button></a></li>
+    </ul>
+</header>
+
+<!-- Contact Us -->
+<main>
+    <section class="contact">
+    <div class="left">
+            <div class="left">
+                <h2>SAY HELLO TO US</h2>
+                <div class="underline"></div>
+        <!-- Display Messages -->
+        @if (TempData["FormSubmitted"] == null)
+        {
+            <!-- Display form prompt only before submission -->
+            <p style="font-size: 24px; text-align: center; color: blue;">
+                @ViewBag.Message
+            </p>
+        }
+        @if (TempData["Alert"] != null)
+        {
+            <p style="font-size: 20px; text-align: center; color: red;">
+                @TempData["Alert"]
+            </p>
+        }
+        @if (ViewData["Response"] != null)
+        {
+            <p style="font-size: 20px; text-align: center; color: green;">
+                @ViewData["Response"]
+            </p>
+        }
+
+        <!-- Contact Form -->
+        @if (TempData["FormSubmitted"] == null)
+        {
+            <form method="post" action="/Home/contact" >
+           
+             
+                        <input type="text" name="name" placeholder="Name" required />
+                        <input type="email" name="email" placeholder="Email" required />
+                        <input type="text" name="subject" placeholder="Subject" required />
+                        <textarea name="message" placeholder="Your message here" required></textarea>
+                        <button type="submit" class="contact-btn">SEND MESSAGE</button>
+            </form>
+        }
+        </div>
+    </div>
+        <div class="right">
+            <h2>Contact Us</h2>
+            <div class="underline"></div>
+            <ul class="contact-info">
+                <li>
+                    <i class="fa-solid fa-house" style="color: var(--light-red)"></i>
+                    Main Road, Sialkot, Pakistan
+                </li>
+                <li>
+                    <i class="fa-solid fa-phone" style="color: var(--light-red)"></i>+01 234 67890
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"
+                       style="color: var(--light-red)"></i>query@example.com
+                </li>
+                <li>
+                    <i class="fa-solid fa-globe" style="color: var(--light-red)"></i>www.example.com
+                </li>
+            </ul>
+            <h2>Connect with us</h2>
+            <div class="underline"></div>
+        </div>
+    </section>
+    <section class="volunteer">
+        <h1>We have been helping people for last 10 years</h1>
+        <p>
+            You can give blood at any of our blood donation venues all over the
+            world. We have total sixty thousands donor centers and visit thousands
+            of other venues on various occasions.
+        </p>
+        <button>Become a Volunteer</button>
+    </section>
+</main>
+
+<!-- footer -->
+
+<footer class="footer">
+    <div class="container">
+        <div>
+            <img src="/media/asset 0.png" alt="" />
+            <p>
+                We are the world's largest and most trusted blood donation center.
+                We have been helping people for the last 10 years.
+            </p>
+        </div>
+        <div class="address">
+            <h3>Address</h3>
+            <p>
+                <i class="fas fa-map-marker-alt"></i> 123, Main Road, Sialkot,
+                Pakistan
+            </p>
+            <p><i class="fa-solid fa-phone"></i> +01 234 67890</p>
+            <p><i class="fas fa-envelope"></i> info@example.com</p>
+        </div>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <a href="/Home/about"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="/Home/contact"><i class="fas fa-phone-alt"></i> Contact Us</a>
+            <a href="/Home/blog"><i class="fas fa-concierge-bell"></i> Blog</a>
+            <a href="/Home/donation"><i class="fas fa-file-alt"></i> Blood Donation Form</a>
+        </div>
+        <div class="newsletter">
+            <h3>Newsletter</h3>
+            <p>
+                Sign up for regular updates and stay up to date with our latest
+                news.
+            </p>
+            <form>
+                <input type="email" placeholder="Your email" />
+                <button type="submit">SignUp</button>
+            </form>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>Developed By Aawaiz Azhar & Daniyal Robin</p>
+    </div>
+</footer>
